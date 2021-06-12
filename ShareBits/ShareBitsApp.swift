@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import GroupActivities
 
 @main
 struct ShareBitsApp: App {
@@ -14,4 +15,9 @@ struct ShareBitsApp: App {
             ContentView()
         }
     }
+}
+
+
+struct ShareBitsActivity: GroupActivity {
+    
 }
