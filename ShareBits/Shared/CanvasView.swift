@@ -9,15 +9,15 @@ import SwiftUI
 import IrregularGradient
 
 struct CanvasView: View {
+    // Definem o número de linhas e colunas da grade
     let cols = 28
     let rows = 28
     
+    // Necessário para o layout da grade
     let gridLayout: [GridItem] = .init(repeating: GridItem(.flexible(), spacing: 3), count: 28)
     
-    @State var translate = 0.0
-    
+    // Array com as informações de cada ponto
     @State var bits: [Bit]?
-    
     @State var viewingMode: ContentMode = .fill
     
     var body: some View {
