@@ -11,17 +11,18 @@ struct BitView: View {
     let bit: Bit
     
     var body: some View {
-        Group {
+        ZStack {
+            inactive
+            
             if bit.active {
                 active
-            } else {
-                inactive
             }
         }.aspectRatio(1.0, contentMode: .fill)
     }
     
     var active: some View {
         RoundedRectangle(cornerRadius: 5, style: .continuous).fill(.white)
+            .transition(.scale)
     }
     
     var inactive: some View {

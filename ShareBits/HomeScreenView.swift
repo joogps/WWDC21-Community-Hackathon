@@ -9,6 +9,8 @@ import SwiftUI
 import IrregularGradient
 
 struct HomeScreenView: View {
+    @EnvironmentObject var canvas: Canvas
+    
     var body: some View {
         ZStack {
             // Renderiza o fundo irregular animado do package do Swift que a gente vai usar
@@ -32,6 +34,13 @@ struct HomeScreenView: View {
                 }
                 
                 Spacer()
+            }
+        }.task {
+            for await session in ShareBitsActivity.sessions() {
+                await canvas.configureSession(session)
+                if canvas.session?.state == .waiting {
+                    canvas.currentScreen = .canvas
+                }
             }
         }
     }

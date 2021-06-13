@@ -11,7 +11,7 @@ import GroupActivities
 struct ShareBitsActivity: GroupActivity {
     var metadata: GroupActivityMetadata {
         var metadata = GroupActivityMetadata()
-        metadata.title = "SharedCanvas"
+        metadata.title = "Group canvas"
         metadata.type = .generic
         return metadata
     }

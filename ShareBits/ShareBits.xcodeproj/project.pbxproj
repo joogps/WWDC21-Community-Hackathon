@@ -7,33 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		273115DC2675A7D0009A04A0 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273115DB2675A7D0009A04A0 /* Messages.swift */; };
 		27B501B5267530F600A1DE7B /* ShareBitsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501A7267530F400A1DE7B /* ShareBitsApp.swift */; };
-		27B501B6267530F600A1DE7B /* ShareBitsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501A7267530F400A1DE7B /* ShareBitsApp.swift */; };
 		27B501B7267530F600A1DE7B /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501A8267530F400A1DE7B /* CanvasView.swift */; };
-		27B501B8267530F600A1DE7B /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501A8267530F400A1DE7B /* CanvasView.swift */; };
 		27B501B9267530F600A1DE7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B501A9267530F600A1DE7B /* Assets.xcassets */; };
-		27B501BA267530F600A1DE7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B501A9267530F600A1DE7B /* Assets.xcassets */; };
 		27B501C42675498100A1DE7B /* BitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501C32675498100A1DE7B /* BitView.swift */; };
-		27B501C52675498100A1DE7B /* BitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501C32675498100A1DE7B /* BitView.swift */; };
 		27B501C92675596500A1DE7B /* IrregularGradient in Frameworks */ = {isa = PBXBuildFile; productRef = 27B501C82675596500A1DE7B /* IrregularGradient */; };
 		27B501CB26755BB000A1DE7B /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501CA26755BB000A1DE7B /* HomeScreenView.swift */; };
-		27B501CC26755BB000A1DE7B /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501CA26755BB000A1DE7B /* HomeScreenView.swift */; };
 		27B501CE2675680700A1DE7B /* ShareBitsActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501CD2675680700A1DE7B /* ShareBitsActivity.swift */; };
-		27B501CF2675680700A1DE7B /* ShareBitsActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501CD2675680700A1DE7B /* ShareBitsActivity.swift */; };
 		27B501D226756A8600A1DE7B /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501D126756A8600A1DE7B /* AppTheme.swift */; };
-		27B501D326756A8600A1DE7B /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501D126756A8600A1DE7B /* AppTheme.swift */; };
 		27B501D526756AA200A1DE7B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501D426756AA200A1DE7B /* Data.swift */; };
-		27B501D626756AA200A1DE7B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501D426756AA200A1DE7B /* Data.swift */; };
 		27B501D82675751500A1DE7B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B501D72675751500A1DE7B /* Launch Screen.storyboard */; };
-		27B501D92675751500A1DE7B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B501D72675751500A1DE7B /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		273115DB2675A7D0009A04A0 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		27B501A7267530F400A1DE7B /* ShareBitsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareBitsApp.swift; sourceTree = "<group>"; };
 		27B501A8267530F400A1DE7B /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		27B501A9267530F600A1DE7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27B501AE267530F600A1DE7B /* ShareBits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareBits.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		27B501B4267530F600A1DE7B /* ShareBits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareBits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B501C32675498100A1DE7B /* BitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitView.swift; sourceTree = "<group>"; };
 		27B501C62675510B00A1DE7B /* ShareBits.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareBits.entitlements; sourceTree = "<group>"; };
 		27B501CA26755BB000A1DE7B /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
@@ -52,13 +44,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		27B501B1267530F600A1DE7B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -66,30 +51,21 @@
 			isa = PBXGroup;
 			children = (
 				27B501C62675510B00A1DE7B /* ShareBits.entitlements */,
-				27B501A6267530F400A1DE7B /* Shared */,
-				27B501D72675751500A1DE7B /* Launch Screen.storyboard */,
-				27B501AF267530F600A1DE7B /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		27B501A6267530F400A1DE7B /* Shared */ = {
-			isa = PBXGroup;
-			children = (
 				27B501A7267530F400A1DE7B /* ShareBitsApp.swift */,
 				27B501CA26755BB000A1DE7B /* HomeScreenView.swift */,
 				27B501A8267530F400A1DE7B /* CanvasView.swift */,
 				27B501C32675498100A1DE7B /* BitView.swift */,
 				27B501D026756A6C00A1DE7B /* Data */,
 				27B501A9267530F600A1DE7B /* Assets.xcassets */,
+				27B501D72675751500A1DE7B /* Launch Screen.storyboard */,
+				27B501AF267530F600A1DE7B /* Products */,
 			);
-			path = Shared;
 			sourceTree = "<group>";
 		};
 		27B501AF267530F600A1DE7B /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				27B501AE267530F600A1DE7B /* ShareBits.app */,
-				27B501B4267530F600A1DE7B /* ShareBits.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,9 +73,10 @@
 		27B501D026756A6C00A1DE7B /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				27B501CD2675680700A1DE7B /* ShareBitsActivity.swift */,
-				27B501D126756A8600A1DE7B /* AppTheme.swift */,
 				27B501D426756AA200A1DE7B /* Data.swift */,
+				27B501CD2675680700A1DE7B /* ShareBitsActivity.swift */,
+				273115DB2675A7D0009A04A0 /* Messages.swift */,
+				27B501D126756A8600A1DE7B /* AppTheme.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -127,23 +104,6 @@
 			productReference = 27B501AE267530F600A1DE7B /* ShareBits.app */;
 			productType = "com.apple.product-type.application";
 		};
-		27B501B3267530F600A1DE7B /* ShareBits (macOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 27B501C0267530F600A1DE7B /* Build configuration list for PBXNativeTarget "ShareBits (macOS)" */;
-			buildPhases = (
-				27B501B0267530F600A1DE7B /* Sources */,
-				27B501B1267530F600A1DE7B /* Frameworks */,
-				27B501B2267530F600A1DE7B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "ShareBits (macOS)";
-			productName = "ShareBits (macOS)";
-			productReference = 27B501B4267530F600A1DE7B /* ShareBits.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -155,9 +115,6 @@
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					27B501AD267530F600A1DE7B = {
-						CreatedOnToolsVersion = 13.0;
-					};
-					27B501B3267530F600A1DE7B = {
 						CreatedOnToolsVersion = 13.0;
 					};
 				};
@@ -179,7 +136,6 @@
 			projectRoot = "";
 			targets = (
 				27B501AD267530F600A1DE7B /* ShareBits (iOS) */,
-				27B501B3267530F600A1DE7B /* ShareBits (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -194,15 +150,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		27B501B2267530F600A1DE7B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				27B501D92675751500A1DE7B /* Launch Screen.storyboard in Resources */,
-				27B501BA267530F600A1DE7B /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -211,26 +158,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				27B501D526756AA200A1DE7B /* Data.swift in Sources */,
+				273115DC2675A7D0009A04A0 /* Messages.swift in Sources */,
 				27B501C42675498100A1DE7B /* BitView.swift in Sources */,
 				27B501CE2675680700A1DE7B /* ShareBitsActivity.swift in Sources */,
 				27B501B7267530F600A1DE7B /* CanvasView.swift in Sources */,
 				27B501D226756A8600A1DE7B /* AppTheme.swift in Sources */,
 				27B501B5267530F600A1DE7B /* ShareBitsApp.swift in Sources */,
 				27B501CB26755BB000A1DE7B /* HomeScreenView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		27B501B0267530F600A1DE7B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				27B501D626756AA200A1DE7B /* Data.swift in Sources */,
-				27B501C52675498100A1DE7B /* BitView.swift in Sources */,
-				27B501CF2675680700A1DE7B /* ShareBitsActivity.swift in Sources */,
-				27B501B8267530F600A1DE7B /* CanvasView.swift in Sources */,
-				27B501D326756A8600A1DE7B /* AppTheme.swift in Sources */,
-				27B501B6267530F600A1DE7B /* ShareBitsApp.swift in Sources */,
-				27B501CC26755BB000A1DE7B /* HomeScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,66 +357,6 @@
 			};
 			name = Release;
 		};
-		27B501C1267530F600A1DE7B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ShareBits.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V9F4J6KX54;
-				ENABLE_APP_SANDBOX = YES;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = rcsbnu.ShareBits;
-				PRODUCT_NAME = ShareBits;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		27B501C2267530F600A1DE7B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ShareBits.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V9F4J6KX54;
-				ENABLE_APP_SANDBOX = YES;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = rcsbnu.ShareBits;
-				PRODUCT_NAME = ShareBits;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -500,15 +374,6 @@
 			buildConfigurations = (
 				27B501BE267530F600A1DE7B /* Debug */,
 				27B501BF267530F600A1DE7B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		27B501C0267530F600A1DE7B /* Build configuration list for PBXNativeTarget "ShareBits (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				27B501C1267530F600A1DE7B /* Debug */,
-				27B501C2267530F600A1DE7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

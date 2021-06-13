@@ -32,12 +32,14 @@ struct CanvasView: View {
                                 BitView(bit: bits[index])
                                     .contentShape(Rectangle())
                                     .onTapGesture {
-                                        canvas.toggleBit(index: index)
+                                        withAnimation(.linear(duration: 0.1)) {
+                                            canvas.toggleBit(index: index)
+                                        }
                                 }
                             }
-                        }.aspectRatio(1.0, contentMode: viewingMode)
+                        }.aspectRatio(1.0, contentMode: .fill)
                     }
-                }.frame(maxWidth: geo.size.width)
+                }
             }
         }.safeAreaInset(edge: .top, content: {
             toolbar
