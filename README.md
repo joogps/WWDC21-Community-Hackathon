@@ -1,7 +1,8 @@
-# ShareBits
-**Collaborate. Play. Create**
+<h1> SharePlay
+<img src="Icon.png" align="right" width=84px> </h1>
 
----
-This is the 2 and ½ Team's project for the WWDC Community Hackathon.
+## Collaborate. Play. Create.
 
-![Cover image](Cover.png)
+**The 2 and ½ team's project for the [WWDC Community Week Hackathon](https://wwdc.community/hackathon).**
+
+![](Cover.png)
