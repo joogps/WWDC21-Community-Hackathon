@@ -1,4 +1,4 @@
-<h1> SharePlay
+<h1> ShareBits
 <img src="Icon.png" align="right" width=84px> </h1>
 
 ## Collaborate. Play. Create.
