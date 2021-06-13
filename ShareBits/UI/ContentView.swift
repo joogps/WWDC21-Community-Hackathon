@@ -19,12 +19,11 @@ struct ContentView: View {
             }
         }.environmentObject(canvas)
         .colorScheme(.dark)
+        .accentColor(canvas.color)
         .task {
             for await session in GroupCanvasActivity.sessions() {
                 await canvas.configureGroupSession(session)
-                if canvas.groupSession?.state == .waiting {
-                    canvas.currentScreen = .canvas
-                }
+                canvas.currentScreen = .canvas
             }
         }
     }

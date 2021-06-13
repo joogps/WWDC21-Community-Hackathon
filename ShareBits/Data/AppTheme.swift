@@ -15,6 +15,8 @@ extension Color {
       static var red = Color(red: 255.0/255.0, green: 172.0/255.0, blue: 172.0/255.0)
       static var blue = Color(red: 161.0/255.0, green: 254.0/255.0, blue: 255.0/255.0)
       
+      static var themeColors = [purple, blue, green, yellow, red]
+      
       static var background = Color(red: 2.0/255.0, green: 11.0/255.0, blue: 37.0/255.0)
       static var primary = Color(red: 41.0/255.0, green: 0.0/255.0, blue: 70.0/255.0)
   }

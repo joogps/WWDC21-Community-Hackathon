@@ -15,6 +15,9 @@ class Canvas: ObservableObject {
     // Título do quadro
     @Published var title: String
     
+    // Cor do usuário
+    @Published var color: Color = .AppTheme.purple
+    
     // Definem o número de linhas e colunas da grade
     let cols: Int
     let rows: Int
@@ -28,7 +31,7 @@ class Canvas: ObservableObject {
     // Messenger do SharePlay
     var messenger: GroupSessionMessenger?
     
-    init(currentScreen: CurrentScreen, title: String = "Canvas", cols: Int = 32, rows: Int = 32) {
+    init(currentScreen: CurrentScreen, title: String = "", cols: Int = 32, rows: Int = 32) {
         self.currentScreen = currentScreen
         
         self.title = title

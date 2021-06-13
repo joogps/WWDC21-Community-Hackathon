@@ -6,73 +6,133 @@
 //
 
 import SwiftUI
+import SlideOverCard
+import CoreMedia
 
 struct HomeScreenView: View {
+    @State var currentCard: Cards? = .color
+    
     var body: some View {
-        ZStack {
-            Color.AppTheme.background
-            
-            VStack(spacing: 25) {
-                Spacer()
-                emptyBitRow
-                settingsRow
-                playRow
-                emptyBitRow
-                Spacer()
+        GeometryReader { geo in
+            ZStack {
+                Color.AppTheme.background
+                
+                VStack(spacing: 25) {
+                    Spacer()
+                    emptyBitRow
+                    playRow
+                    settingsRow
+                    emptyBitRow
+                    Spacer()
+                }
+            }.ignoresSafeArea()
+                .frame(maxWidth: geo.size.width)
+        }.slideOverCard(item: $currentCard, options: [.hideExitButton], content: { item in
+            switch item {
+            case .color: ColorPickerView()
+            case .help: Text("how does it work")
+            case .setup: SetupView()
             }
-        }.ignoresSafeArea()
+        })
     }
     
     var playRow: some View {
         HStack(spacing: 25) {
-            ColoredBit(color: .AppTheme.blue)
-            DoubledColoredBit(color: .AppTheme.red)
-            ColoredBit(color: .AppTheme.purple)
+            ColoredBit(color: .AppTheme.blue).randomRotation()
+            ColoredButton(color: .AppTheme.red, systemName: "play.fill", aspectRatio: 2.0, action: {
+                withAnimation {
+                    currentCard = .setup
+                }
+            }).randomRotation()
+            ColoredBit(color: .AppTheme.yellow).randomRotation()
         }
     }
     
     var settingsRow: some View {
         HStack(spacing: 25) {
             ColoredBit(color: .AppTheme.purple)
-            ColoredButton(color: .AppTheme.green, systemName: "paintbrush.fill")
-            ColoredButton(color: .AppTheme.blue, systemName: "questionmark")
+                .randomRotation()
+            ColoredButton(color: .AppTheme.green, systemName: "paintbrush.fill", action: {
+                withAnimation {
+                    currentCard = .color
+                }
+            }).randomRotation()
+            ColoredButton(color: .AppTheme.blue, systemName: "questionmark", action: {
+                withAnimation {
+                    currentCard = .help
+                }
+            }).randomRotation()
             ColoredBit(color: .AppTheme.red)
+                .randomRotation()
         }
     }
     
     var emptyBitRow: some View {
         HStack(spacing: 25) {
-            EmptyBit()
-            EmptyBit()
-            EmptyBit()
-            EmptyBit()
+            EmptyBit().randomRotation()
+            EmptyBit().randomRotation()
+            EmptyBit().randomRotation()
+            EmptyBit().randomRotation()
         }
     }
 }
 
-struct ColoredButton: View {
-    let color: Color
-    let systemName: String
-    let action: () -> () = {}
+struct ColorPickerView: View {
+    @EnvironmentObject var canvas: Canvas
     
     var body: some View {
-        ZStack {
-            ColoredBit(color: color)
-            Image(systemName: systemName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .foregroundStyle(.secondary)
-                .foregroundColor(.black)
-                .font(.body.bold())
-                .padding(30)
-        }.aspectRatio(1.0, contentMode: .fit)
+        VStack(alignment: .leading, spacing: 5) {
+            Text("pick your color").monospacedTitle()
+            
+            HStack(spacing: 10) {
+                ForEach(Color.AppTheme.themeColors, id: \.self) { color in
+                    ZStack {
+                        if canvas.color == color {
+                            Circle().fill(color).padding(8)
+                            Circle().stroke(color, lineWidth: 4).padding(2)
+                        } else {
+                            Circle().fill(color)
+                        }
+                    }.onTapGesture {
+                        canvas.color = color
+                    }
+                }
+            }
+            
+            Button("\(Text("done").font(.system(.body).weight(.heavy)))", action: {}).buttonStyle(SOCActionButton(textColor: .black))
+        }.frame(height: 200)
     }
 }
 
-extension View {
-    func randomRotation(amplitude: Double = 0.03) -> some View {
-        return self.rotationEffect(.radians(.random(in: -Double.pi*amplitude...Double.pi*amplitude)))
+struct SetupView: View {
+    @EnvironmentObject var canvas: Canvas
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("name your canvas").monospacedTitle()
+            
+            TextField("Group canvas", text: $canvas.title)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+            
+            Button("\(Text("start").font(.system(.body).weight(.heavy)))", action: {
+                GroupCanvasActivity().activate()
+            }).buttonStyle(SOCActionButton(textColor: .black))
+        }
     }
+}
+
+extension Text {
+    func monospacedTitle() -> Text {
+        return self.font(.system(size: 32, weight: .bold, design: .monospaced)).kerning(-2.5)
+    }
+}
+
+enum Cards: Identifiable {
+    var id: Self { self }
+    
+    case color
+    case help
+    case setup
 }
 
 struct HomeScreenView_Previews: PreviewProvider {
