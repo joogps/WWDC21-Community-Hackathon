@@ -10,7 +10,7 @@ import SlideOverCard
 import CoreMedia
 
 struct HomeScreenView: View {
-    @State var currentCard: Cards? = .color
+    @State var currentCard: Cards? = nil
     
     var body: some View {
         GeometryReader { geo in
@@ -29,9 +29,9 @@ struct HomeScreenView: View {
                 .frame(maxWidth: geo.size.width)
         }.slideOverCard(item: $currentCard, options: [.hideExitButton], content: { item in
             switch item {
-            case .color: ColorPickerView()
+            case .color: ColorPickerView(currentCard: $currentCard)
             case .help: Text("how does it work")
-            case .setup: SetupView()
+            case .setup: SetupView(currentCard: $currentCard)
             }
         })
     }
@@ -39,7 +39,7 @@ struct HomeScreenView: View {
     var playRow: some View {
         HStack(spacing: 25) {
             ColoredBit(color: .AppTheme.blue).randomRotation()
-            ColoredButton(color: .AppTheme.red, systemName: "play.fill", aspectRatio: 2.0, action: {
+            ColoredButton(color: .AppTheme.red, systemName: "shareplay", aspectRatio: 2.0, action: {
                 withAnimation {
                     currentCard = .setup
                 }
@@ -79,6 +79,7 @@ struct HomeScreenView: View {
 
 struct ColorPickerView: View {
     @EnvironmentObject var canvas: Canvas
+    @Binding var currentCard: Cards?
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
@@ -99,13 +100,18 @@ struct ColorPickerView: View {
                 }
             }
             
-            Button("\(Text("done").font(.system(.body).weight(.heavy)))", action: {}).buttonStyle(SOCActionButton(textColor: .black))
+            Button("\(Text("done").font(.system(.body).weight(.heavy)))", action: {
+                withAnimation {
+                    currentCard = nil
+                }
+            }).buttonStyle(SOCActionButton(textColor: .black))
         }.frame(height: 200)
     }
 }
 
 struct SetupView: View {
     @EnvironmentObject var canvas: Canvas
+    @Binding var currentCard: Cards?
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -115,7 +121,14 @@ struct SetupView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
             Button("\(Text("start").font(.system(.body).weight(.heavy)))", action: {
-                GroupCanvasActivity().activate()
+                if canvas.title.isEmpty {
+                    canvas.title = "Group canvas"
+                }
+                
+                GroupCanvasActivity(name: canvas.title).activate()
+                withAnimation {
+                    currentCard = nil
+                }
             }).buttonStyle(SOCActionButton(textColor: .black))
         }
     }

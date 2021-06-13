@@ -23,7 +23,10 @@ struct ContentView: View {
         .task {
             for await session in GroupCanvasActivity.sessions() {
                 await canvas.configureGroupSession(session)
-                canvas.currentScreen = .canvas
+                
+                withAnimation {
+                    canvas.currentScreen = .canvas
+                }
             }
         }
     }

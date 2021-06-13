@@ -55,7 +55,7 @@ struct ColoredButton: View {
                 Image(systemName: systemName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(.secondary, .tertiary, .tertiary)
                     .foregroundColor(.black)
                     .font(.body.bold())
                     .padding(30)

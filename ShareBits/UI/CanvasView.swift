@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import SlideOverCard
 
 struct CanvasView: View {
     @EnvironmentObject var canvas: Canvas
+    
+    @State var currentCard: Cards? = nil
     
     // Espaçamento das células
     let spacing = 3.0
@@ -44,6 +47,11 @@ struct CanvasView: View {
             toolbar
         }).ignoresSafeArea()
         .background(Color.AppTheme.background.ignoresSafeArea())
+        .slideOverCard(item: $currentCard) { item in
+            if item == .color {
+                ColorPickerView(currentCard: $currentCard)
+            }
+        }
     }
     
     var toolbar: some View {
@@ -51,17 +59,26 @@ struct CanvasView: View {
             Rectangle().fill(.ultraThinMaterial)
             
             HStack {
-                Image(systemName: "xmark.circle.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+                Button(action: {
+                    canvas.groupSession?.leave()
+                    canvas.currentScreen = .home
+                }) {
+                    Image(systemName: "xmark.circle.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                }
                 Spacer()
                 Text(canvas.title)
                     .font(.system(size: 20, weight: .bold, design: .monospaced))
                     .kerning(-1)
                 Spacer()
-                Image(systemName: "square.grid.3x3.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+                Button(action: {
+                    currentCard = .color
+                }) {
+                    Image(systemName: "paintbrush")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                }
             }.padding(12)
                 .foregroundStyle(.secondary)
             .frame(height: 50)

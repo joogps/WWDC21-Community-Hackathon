@@ -9,11 +9,13 @@ import Foundation
 import GroupActivities
 
 struct GroupCanvasActivity: GroupActivity {
+    let name: String
+    
     static var activityIdentifier = "com.rcsbnu.ShareBits.GroupCanvas"
     
     var metadata: GroupActivityMetadata {
         var metadata = GroupActivityMetadata()
-        metadata.title = "Group canvas"
+        metadata.title = name
         metadata.type = .generic
         return metadata
     }

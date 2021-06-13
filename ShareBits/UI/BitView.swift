@@ -10,6 +10,10 @@ import SwiftUI
 struct BitView: View {
     let bit: Bit
     
+    var color: Color {
+        Color(red: bit.red, green: bit.green, blue: bit.blue)
+    }
+    
     var body: some View {
         ZStack {
             inactive
@@ -21,7 +25,7 @@ struct BitView: View {
     }
     
     var active: some View {
-        RoundedRectangle(cornerRadius: 5, style: .continuous).fill(.white)
+        RoundedRectangle(cornerRadius: 5, style: .continuous).fill(color)
             .transition(.scale)
     }
     

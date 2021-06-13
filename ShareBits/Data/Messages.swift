@@ -11,4 +11,13 @@ import SwiftUI
 struct ToggleBitMessage: Codable {
     let index: Int
     let active: Bool
+    
+    let red: Double
+    let green: Double
+    let blue: Double
+}
+
+struct CanvasMessage: Codable {
+    let bits: [Bit]
+    let title: String
 }
