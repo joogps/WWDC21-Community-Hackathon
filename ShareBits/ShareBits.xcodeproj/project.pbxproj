@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		273115DC2675A7D0009A04A0 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273115DB2675A7D0009A04A0 /* Messages.swift */; };
+		273115DE2675B433009A04A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273115DD2675B433009A04A0 /* ContentView.swift */; };
+		273115E22675C1FE009A04A0 /* SlideOverCard in Frameworks */ = {isa = PBXBuildFile; productRef = 273115E12675C1FE009A04A0 /* SlideOverCard */; };
+		273115E42675C214009A04A0 /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273115E32675C214009A04A0 /* Elements.swift */; };
 		27B501B5267530F600A1DE7B /* ShareBitsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501A7267530F400A1DE7B /* ShareBitsApp.swift */; };
 		27B501B7267530F600A1DE7B /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501A8267530F400A1DE7B /* CanvasView.swift */; };
 		27B501B9267530F600A1DE7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B501A9267530F600A1DE7B /* Assets.xcassets */; };
 		27B501C42675498100A1DE7B /* BitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501C32675498100A1DE7B /* BitView.swift */; };
-		27B501C92675596500A1DE7B /* IrregularGradient in Frameworks */ = {isa = PBXBuildFile; productRef = 27B501C82675596500A1DE7B /* IrregularGradient */; };
 		27B501CB26755BB000A1DE7B /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501CA26755BB000A1DE7B /* HomeScreenView.swift */; };
-		27B501CE2675680700A1DE7B /* ShareBitsActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501CD2675680700A1DE7B /* ShareBitsActivity.swift */; };
+		27B501CE2675680700A1DE7B /* GroupCanvasActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501CD2675680700A1DE7B /* GroupCanvasActivity.swift */; };
 		27B501D226756A8600A1DE7B /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501D126756A8600A1DE7B /* AppTheme.swift */; };
-		27B501D526756AA200A1DE7B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501D426756AA200A1DE7B /* Data.swift */; };
+		27B501D526756AA200A1DE7B /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501D426756AA200A1DE7B /* Canvas.swift */; };
 		27B501D82675751500A1DE7B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B501D72675751500A1DE7B /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		273115DB2675A7D0009A04A0 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		273115DD2675B433009A04A0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		273115E32675C214009A04A0 /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
 		27B501A7267530F400A1DE7B /* ShareBitsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareBitsApp.swift; sourceTree = "<group>"; };
 		27B501A8267530F400A1DE7B /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		27B501A9267530F600A1DE7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -29,9 +33,9 @@
 		27B501C32675498100A1DE7B /* BitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitView.swift; sourceTree = "<group>"; };
 		27B501C62675510B00A1DE7B /* ShareBits.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareBits.entitlements; sourceTree = "<group>"; };
 		27B501CA26755BB000A1DE7B /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
-		27B501CD2675680700A1DE7B /* ShareBitsActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareBitsActivity.swift; sourceTree = "<group>"; };
+		27B501CD2675680700A1DE7B /* GroupCanvasActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCanvasActivity.swift; sourceTree = "<group>"; };
 		27B501D126756A8600A1DE7B /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
-		27B501D426756AA200A1DE7B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		27B501D426756AA200A1DE7B /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 		27B501D72675751500A1DE7B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -40,21 +44,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27B501C92675596500A1DE7B /* IrregularGradient in Frameworks */,
+				273115E22675C1FE009A04A0 /* SlideOverCard in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		273115DF2675B440009A04A0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				273115DD2675B433009A04A0 /* ContentView.swift */,
+				27B501CA26755BB000A1DE7B /* HomeScreenView.swift */,
+				273115E32675C214009A04A0 /* Elements.swift */,
+				27B501A8267530F400A1DE7B /* CanvasView.swift */,
+				27B501C32675498100A1DE7B /* BitView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		27B501A1267530F300A1DE7B = {
 			isa = PBXGroup;
 			children = (
 				27B501C62675510B00A1DE7B /* ShareBits.entitlements */,
 				27B501A7267530F400A1DE7B /* ShareBitsApp.swift */,
-				27B501CA26755BB000A1DE7B /* HomeScreenView.swift */,
-				27B501A8267530F400A1DE7B /* CanvasView.swift */,
-				27B501C32675498100A1DE7B /* BitView.swift */,
+				273115DF2675B440009A04A0 /* UI */,
 				27B501D026756A6C00A1DE7B /* Data */,
 				27B501A9267530F600A1DE7B /* Assets.xcassets */,
 				27B501D72675751500A1DE7B /* Launch Screen.storyboard */,
@@ -73,8 +87,8 @@
 		27B501D026756A6C00A1DE7B /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				27B501D426756AA200A1DE7B /* Data.swift */,
-				27B501CD2675680700A1DE7B /* ShareBitsActivity.swift */,
+				27B501D426756AA200A1DE7B /* Canvas.swift */,
+				27B501CD2675680700A1DE7B /* GroupCanvasActivity.swift */,
 				273115DB2675A7D0009A04A0 /* Messages.swift */,
 				27B501D126756A8600A1DE7B /* AppTheme.swift */,
 			);
@@ -98,7 +112,7 @@
 			);
 			name = "ShareBits (iOS)";
 			packageProductDependencies = (
-				27B501C82675596500A1DE7B /* IrregularGradient */,
+				273115E12675C1FE009A04A0 /* SlideOverCard */,
 			);
 			productName = "ShareBits (iOS)";
 			productReference = 27B501AE267530F600A1DE7B /* ShareBits.app */;
@@ -129,7 +143,7 @@
 			);
 			mainGroup = 27B501A1267530F300A1DE7B;
 			packageReferences = (
-				27B501C72675596500A1DE7B /* XCRemoteSwiftPackageReference "IrregularGradient" */,
+				273115E02675C1FE009A04A0 /* XCRemoteSwiftPackageReference "SlideOverCard" */,
 			);
 			productRefGroup = 27B501AF267530F600A1DE7B /* Products */;
 			projectDirPath = "";
@@ -157,11 +171,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27B501D526756AA200A1DE7B /* Data.swift in Sources */,
+				27B501D526756AA200A1DE7B /* Canvas.swift in Sources */,
 				273115DC2675A7D0009A04A0 /* Messages.swift in Sources */,
 				27B501C42675498100A1DE7B /* BitView.swift in Sources */,
-				27B501CE2675680700A1DE7B /* ShareBitsActivity.swift in Sources */,
+				27B501CE2675680700A1DE7B /* GroupCanvasActivity.swift in Sources */,
+				273115E42675C214009A04A0 /* Elements.swift in Sources */,
 				27B501B7267530F600A1DE7B /* CanvasView.swift in Sources */,
+				273115DE2675B433009A04A0 /* ContentView.swift in Sources */,
 				27B501D226756A8600A1DE7B /* AppTheme.swift in Sources */,
 				27B501B5267530F600A1DE7B /* ShareBitsApp.swift in Sources */,
 				27B501CB26755BB000A1DE7B /* HomeScreenView.swift in Sources */,
@@ -381,21 +397,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		27B501C72675596500A1DE7B /* XCRemoteSwiftPackageReference "IrregularGradient" */ = {
+		273115E02675C1FE009A04A0 /* XCRemoteSwiftPackageReference "SlideOverCard" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/joogps/IrregularGradient";
+			repositoryURL = "https://github.com/joogps/SlideOverCard";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 2.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		27B501C82675596500A1DE7B /* IrregularGradient */ = {
+		273115E12675C1FE009A04A0 /* SlideOverCard */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 27B501C72675596500A1DE7B /* XCRemoteSwiftPackageReference "IrregularGradient" */;
-			productName = IrregularGradient;
+			package = 273115E02675C1FE009A04A0 /* XCRemoteSwiftPackageReference "SlideOverCard" */;
+			productName = SlideOverCard;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

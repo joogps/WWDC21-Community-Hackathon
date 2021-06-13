@@ -1,5 +1,5 @@
 //
-//  Data.swift
+//  Canvas.swift
 //  ShareBits
 //
 //  Created by João Gabriel Pozzobon dos Santos on 12/06/21.
@@ -23,7 +23,7 @@ class Canvas: ObservableObject {
     @Published var bits: [Bit]
     
     // Session do SharePlay
-    @Published var session: GroupSession<ShareBitsActivity>?
+    @Published var groupSession: GroupSession<GroupCanvasActivity>?
     
     // Messenger do SharePlay
     var messenger: GroupSessionMessenger?
@@ -64,11 +64,10 @@ class Canvas: ObservableObject {
         }
     }
     
-    func configureSession(_ session: GroupSession<ShareBitsActivity>) async {
-        self.session = session
+    func configureGroupSession(_ groupSession: GroupSession<GroupCanvasActivity>) async {
+        self.groupSession = groupSession
         
-        
-        let messenger = GroupSessionMessenger(session: session)
+        let messenger = GroupSessionMessenger(session: groupSession)
         self.messenger = messenger
         
         async {
@@ -77,7 +76,7 @@ class Canvas: ObservableObject {
             }
         }
         
-        session.join()
+        groupSession.join()
     }
     
     func handle(_ message: ToggleBitMessage) {
@@ -88,14 +87,15 @@ class Canvas: ObservableObject {
     }
 }
 
+enum CurrentScreen {
+    case home
+    case canvas
+}
+
+
 struct Bit: Identifiable {
     let id = UUID()
     
     var active = false
     var color = Color.white
-}
-
-struct ToggleBitMessage: Codable {
-    let index: Int
-    let active: Bool
 }

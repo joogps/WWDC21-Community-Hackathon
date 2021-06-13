@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import IrregularGradient
 
 struct CanvasView: View {
     @EnvironmentObject var canvas: Canvas

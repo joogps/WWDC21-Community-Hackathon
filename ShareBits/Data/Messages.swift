@@ -7,3 +7,8 @@
 
 import Foundation
 import SwiftUI
+
+struct ToggleBitMessage: Codable {
+    let index: Int
+    let active: Bool
+}
