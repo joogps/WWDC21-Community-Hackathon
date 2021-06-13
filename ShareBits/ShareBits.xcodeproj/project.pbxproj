@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27166C272676720900C72E31 /* SlideOverCard in Frameworks */ = {isa = PBXBuildFile; productRef = 27166C262676720900C72E31 /* SlideOverCard */; };
 		273115DC2675A7D0009A04A0 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273115DB2675A7D0009A04A0 /* Messages.swift */; };
 		273115DE2675B433009A04A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273115DD2675B433009A04A0 /* ContentView.swift */; };
-		273115E22675C1FE009A04A0 /* SlideOverCard in Frameworks */ = {isa = PBXBuildFile; productRef = 273115E12675C1FE009A04A0 /* SlideOverCard */; };
 		273115E42675C214009A04A0 /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273115E32675C214009A04A0 /* Elements.swift */; };
 		27B501B5267530F600A1DE7B /* ShareBitsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501A7267530F400A1DE7B /* ShareBitsApp.swift */; };
 		27B501B7267530F600A1DE7B /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B501A8267530F400A1DE7B /* CanvasView.swift */; };
@@ -44,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				273115E22675C1FE009A04A0 /* SlideOverCard in Frameworks */,
+				27166C272676720900C72E31 /* SlideOverCard in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +112,7 @@
 			);
 			name = "ShareBits (iOS)";
 			packageProductDependencies = (
-				273115E12675C1FE009A04A0 /* SlideOverCard */,
+				27166C262676720900C72E31 /* SlideOverCard */,
 			);
 			productName = "ShareBits (iOS)";
 			productReference = 27B501AE267530F600A1DE7B /* ShareBits.app */;
@@ -143,7 +143,7 @@
 			);
 			mainGroup = 27B501A1267530F300A1DE7B;
 			packageReferences = (
-				273115E02675C1FE009A04A0 /* XCRemoteSwiftPackageReference "SlideOverCard" */,
+				27166C252676720900C72E31 /* XCRemoteSwiftPackageReference "SlideOverCard" */,
 			);
 			productRefGroup = 27B501AF267530F600A1DE7B /* Products */;
 			projectDirPath = "";
@@ -397,7 +397,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		273115E02675C1FE009A04A0 /* XCRemoteSwiftPackageReference "SlideOverCard" */ = {
+		27166C252676720900C72E31 /* XCRemoteSwiftPackageReference "SlideOverCard" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/joogps/SlideOverCard";
 			requirement = {
@@ -408,9 +408,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		273115E12675C1FE009A04A0 /* SlideOverCard */ = {
+		27166C262676720900C72E31 /* SlideOverCard */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 273115E02675C1FE009A04A0 /* XCRemoteSwiftPackageReference "SlideOverCard" */;
+			package = 27166C252676720900C72E31 /* XCRemoteSwiftPackageReference "SlideOverCard" */;
 			productName = SlideOverCard;
 		};
 /* End XCSwiftPackageProductDependency section */

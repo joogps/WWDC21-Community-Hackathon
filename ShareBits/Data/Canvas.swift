@@ -160,7 +160,7 @@ enum CurrentScreen {
 
 
 struct Bit: Identifiable, Codable {
-    let id = UUID()
+    var id = UUID()
     
     var active = false
     

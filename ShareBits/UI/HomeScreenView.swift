@@ -109,6 +109,53 @@ struct ColorPickerView: View {
     }
 }
 
+struct HelpView: View {
+    @EnvironmentObject var canvas: Canvas
+    @Binding var currentCard: Cards?
+    
+    var body: some View {
+        VStack {
+            Text("how it works").monospacedTitle()
+            
+            ItemView(systemName: "", title: "Collaborate", description: "ShareBits uses group activities to make two or more people work together.")
+            
+            ItemView(systemName: "", title: "Play", description: "The canvas environment allows for cheerful playing.")
+            
+            ItemView(systemName: "", title: "Create", description: "With the use of color and creativity, you can create beautiful images.")
+            
+            Button("\(Text("ok").font(.system(.body).weight(.heavy)))", action: {
+                withAnimation {
+                    currentCard = nil
+                }
+            }).buttonStyle(SOCActionButton(textColor: .black))
+        }
+    }
+}
+
+struct ItemView: View {
+    let systemName: String
+    let title: String
+    let description: String
+    
+    var body: some View {
+        HStack (alignment: .top, spacing: 5) {
+            Image(systemName: systemName)
+                .font(.system(size: 30, weight: .bold, design: .default))
+            
+            VStack {
+                Text(title).font(.title3)
+                Text(description)
+            }
+        }
+    }
+}
+
+struct Preview: PreviewProvider {
+    static var previews: some View {
+        ItemView(systemName: "person.fill", title: "Collaborate", description: "Lorem Ipsum")
+    }
+}
+
 struct SetupView: View {
     @EnvironmentObject var canvas: Canvas
     @Binding var currentCard: Cards?
@@ -146,10 +193,4 @@ enum Cards: Identifiable {
     case color
     case help
     case setup
-}
-
-struct HomeScreenView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeScreenView()
-    }
 }

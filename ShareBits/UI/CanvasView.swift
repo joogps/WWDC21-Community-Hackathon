@@ -60,8 +60,7 @@ struct CanvasView: View {
             
             HStack {
                 Button(action: {
-                    canvas.groupSession?.leave()
-                    canvas.currentScreen = .home
+                    canvas.leaveSession()
                 }) {
                     Image(systemName: "xmark.circle.fill")
                         .resizable()
